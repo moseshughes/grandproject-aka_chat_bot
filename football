@@ -1,0 +1,43 @@
+package grandporjectthingybot;
+
+import java.util.Scanner;
+
+public class Foooootbull {
+	public static void main(String[]args) {
+		boolean x = false;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Are you interested in Football?");
+		String likeFootball = scan.next();
+		if(likeFootball.toLowerCase().equals("yes")) {
+			x = true;
+		}
+		while(x==true) {
+			System.out.println("Do you want to know about history, rules, or players");
+			String answer = scan.next();
+			switch(answer) {
+			case "history":
+				System.out.println("The contemporary history of the world's favourite game\n"
+						+ "spans more than 100 years. It all began in 1863 in England,\n"
+						+ "when rugby football and association football branched off on\n"
+						+ "their different courses and the Football Association in England\n"
+						+ "was formed - becoming the sport's first governing body.");
+				break;
+			case "rules":
+				System.out.println("The defense tries to prevent the offense from\n"
+						+ "scoring or advancing the football. The down system:\n"
+						+ "The offense must advance the ball at least 10 yards\n"
+						+ "every four plays or downs. Each time the offense is\n"
+						+ "successful in advancing the ball 10 yards, they get four\n"
+						+ "more downs or what is called a \"first down\".");
+				break;
+			case "players":
+				int whatplayer = (int) (Math.random()*10+1);
+				
+			default:
+				System.out.println("Sorry, didn't understand that, please try again.");
+				continue;
+			}
+			
+		}
+	}
+}
